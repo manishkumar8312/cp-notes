@@ -68,11 +68,11 @@ cp-notes/
 
 ## Roadmap
 - Number Theory
+- Graph Algorithms
+- Dynamic Programming
 - Bit Manipulation
 - Arrays and Strings
 - Recursion and Backtracking
-- Dynamic Programming
-- Graph Algorithms
 
 ---
 
