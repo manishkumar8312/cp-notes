@@ -11,6 +11,15 @@ The repository is designed for concept clarity, efficient problem solving, and q
 
 ## Current Coverage
 
+### CP-31 800 Sheet
+A collection of 800-rated problems from Codeforces for systematic practice:
+- Cover in Water
+- Doremy's Paint 3
+- Game with Integers
+- Halloumi Boxes
+- Jagged Swaps
+- Line Trip
+
 ### Number Theory
 
 - Prime numbers
@@ -18,6 +27,7 @@ The repository is designed for concept clarity, efficient problem solving, and q
 - Counting primes
 - Nth prime
 - Almost primes
+- T-primes
 - GCD (Euclidean Algorithm)
 - Common greatest divisor
 - Counting divisors
@@ -39,17 +49,29 @@ All solutions are written with competitive programming constraints in mind.
 
 ```
 
-cp-notes/
+CP notes/
 │
-├── NumberTheory/
+├── CP-31 800 sheet/
+│   ├── A_Cover_in_Water.cpp
+│   ├── A_Doremy_s_Paint_3.cpp
+│   ├── A_Game_with_Integers.cpp
+│   ├── A_Halloumi_Boxes.cpp
+│   ├── A_Jagged_Swaps.cpp
+│   └── A_Line_Trip.cpp
+│
+├── Number-Theory/
 │   ├── sieveofEratosthenes.cpp
 │   ├── countPrimes.cpp
 │   ├── NthPrime.cpp
 │   ├── AlmostPrimes.cpp
+│   ├── B_T_primes.cpp
 │   ├── gcdCalculate.cpp
+│   ├── commonGreatestDivisor.cpp
 │   ├── countingDivisors.cpp
 │   ├── DivisorSummation.cpp
-│   └── Problem-specific implementations
+│   ├── A_Little_Elephant_and_Problem.cpp
+│   ├── Notes/
+│   └── Other problem implementations
 │
 └── README.md
 
@@ -67,12 +89,13 @@ cp-notes/
 ---
 
 ## Roadmap
-- Number Theory
-- Graph Algorithms
-- Dynamic Programming
-- Bit Manipulation
-- Arrays and Strings
-- Recursion and Backtracking
+-  Number Theory
+-  CP-31 800 Sheet (In Progress)
+-  Graph Algorithms
+-  Dynamic Programming
+-  Bit Manipulation
+-  Arrays and Strings
+-  Recursion and Backtracking
 
 ---
 
