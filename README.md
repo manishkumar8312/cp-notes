@@ -13,12 +13,18 @@ The repository is designed for concept clarity, efficient problem solving, and q
 
 ### CP-31 800 Sheet
 A collection of 800-rated problems from Codeforces for systematic practice:
+- Ambitious Kid
 - Cover in Water
+- Don't Try to Count
 - Doremy's Paint 3
 - Game with Integers
+- Goals of Victory
 - Halloumi Boxes
+- How Much Does Daytona Cost
 - Jagged Swaps
 - Line Trip
+- United We Stand
+- Sequence Game (B)
 
 ### Number Theory
 
@@ -52,12 +58,18 @@ All solutions are written with competitive programming constraints in mind.
 CP notes/
 │
 ├── CP-31 800 sheet/
+│   ├── A_Ambitious_Kid.cpp
 │   ├── A_Cover_in_Water.cpp
+│   ├── A_Don_t_Try_to_Count.cpp
 │   ├── A_Doremy_s_Paint_3.cpp
 │   ├── A_Game_with_Integers.cpp
+│   ├── A_Goals_of_Victory.cpp
 │   ├── A_Halloumi_Boxes.cpp
+│   ├── A_How_Much_Does_Daytona_Cost.cpp
 │   ├── A_Jagged_Swaps.cpp
-│   └── A_Line_Trip.cpp
+│   ├── A_Line_Trip.cpp
+│   ├── A_United_We_Stand.cpp
+│   └── B_Sequence_Game.cpp
 │
 ├── Number-Theory/
 │   ├── sieveofEratosthenes.cpp
@@ -70,8 +82,8 @@ CP notes/
 │   ├── countingDivisors.cpp
 │   ├── DivisorSummation.cpp
 │   ├── A_Little_Elephant_and_Problem.cpp
-│   ├── Notes/
-│   └── Other problem implementations
+│   ├── c.cpp
+│   └── Notes/
 │
 └── README.md
 
