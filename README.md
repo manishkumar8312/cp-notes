@@ -4,6 +4,8 @@
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![Focus](https://img.shields.io/badge/Focus-Competitive%20Programming-informational)
 
+[CP Resources](https://docs.google.com/document/d/1Qmh_suVjBv0F3LFC5CfO06knn2zW92nfTyVlQLrUnFs/edit?tab=t.0)
+
 A structured repository containing Competitive Programming notes and optimized implementations.  
 The repository is designed for concept clarity, efficient problem solving, and quick revision for contests and interviews.
 
@@ -108,7 +110,6 @@ CP notes/
 -  Bit Manipulation
 -  Arrays and Strings
 -  Recursion and Backtracking
-
 ---
 
 ## Contribution
