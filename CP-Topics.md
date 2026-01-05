@@ -11,7 +11,7 @@
 
 ## Resources for Number Theory
 
-- **[CodeNCode – Number Theory Playlist](https://www.youtube.com/watch?v=eRkqvQtm4DU&list=PL2q4fbVm1Ik4liHX78IRslXzUr8z5QxsG)**  
+- **[CodeNCode – Number Theory Playlist](https://youtube.com/playlist?list=PL5DyztRVgtRWblnyEHtajWijQffrfwLz6&si=xRoPWHPVSk428xWF)**  
 - **[CP-Algorithms – Algebra Section](https://cp-algorithms.com/#algebra)** 
 - **[Utkarsh Gupta – Number Theory (YouTube)](https://www.youtube.com/watch?v=tDM6lT-qjys)** 
 
