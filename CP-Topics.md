@@ -8,3 +8,11 @@
 - Sieve of Eratosthenes
 - Binary Modular Exponentiation
 - Combinatorics
+
+# Resources for Number Theory
+CodeNCode Youtube (https://www.youtube.com/watch?v=eRkqvQtm4DU&list=PL2q4fbVm1Ik4liHX78IRslXzUr8z5QxsG)
+CP Algorithms Algebra Section (https://cp-algorithms.com/#algebra)
+Utkarsh Gupta (https://www.youtube.com/watch?v=tDM6lT-qjys)
+
+
+
