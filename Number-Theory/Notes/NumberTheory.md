@@ -1,56 +1,60 @@
-## Number Theory
+# Number Theory
 
-<details>
-<summary><strong>Modular Arithmetic</strong></summary>
+## 1. Modular Arithmetic
 
-Modular arithmetic deals with operations under a fixed modulus `m`.
+Modular arithmetic is fundamental for handling large numbers efficiently.
 
-**Key Points**
+### Key Properties
 
-* Prevents integer overflow
-* Frequently used in competitive programming and cryptography
+* Prevents overflow
+* Operations are closed under modulo
+* Division requires modular inverse
 
-**Formulas**
+### Formulas
 
-* `(a + b) % m = ((a % m) + (b % m)) % m`
-* `(a * b) % m = ((a % m) * (b % m)) % m`
+```
+(a + b) % m = ((a % m) + (b % m)) % m
+(a * b) % m = ((a % m) * (b % m)) % m
+(a - b) % m = ((a % m - b % m) + m) % m
+```
 
-**Time Complexity**
-
-* All basic operations: `O(1)`
-
-**C++ Implementation**
+### Negative Modulo Handling
 
 ```cpp
-long long add(long long a, long long b, long long mod) {
-    return (a % mod + b % mod) % mod;
+long long mod(long long a, long long m) {
+    return (a % m + m) % m;
 }
 ```
 
-</details>
+### Modular Inverse (m is prime)
+
+Using Fermat’s Little Theorem:
+
+```
+a^(m-2) % m
+```
+
+```cpp
+long long modInv(long long a, long long m) {
+    return binpow(a, m - 2, m);
+}
+```
+
+### Modular Division
+
+```
+(a / b) % m = a × modInv(b) % m
+```
+
+Time Complexity: `O(1)` per operation
 
 ---
 
-<details>
-<summary><strong>Primes, Divisors and Multiples</strong></summary>
+## 2. Prime Numbers, Divisors, Factorization
 
-This topic focuses on properties of prime numbers and factorization.
+### Naive Prime Check
 
-**Key Points**
-
-* Prime number: divisible only by 1 and itself
-* Divisors can be found in `O(√n)`
-* Useful in factor-based optimizations
-
-**Formula**
-If `n = p₁^a × p₂^b × ...`
-Number of divisors = `(a + 1)(b + 1)...`
-
-**Time Complexity**
-
-* Prime check: `O(√n)`
-
-**C++ Implementation**
+Time Complexity: `O(√n)`
 
 ```cpp
 bool isPrime(int n) {
@@ -61,16 +65,47 @@ bool isPrime(int n) {
 }
 ```
 
-</details>
+### Optimized Factorization using SPF (Smallest Prime Factor)
+
+Preprocessing: `O(n log log n)`
+Factorization per query: `O(log n)`
+
+```cpp
+const int N = 1e6;
+int spf[N + 1];
+
+void sieveSPF() {
+    for (int i = 1; i <= N; i++) spf[i] = i;
+    for (int i = 2; i * i <= N; i++) {
+        if (spf[i] == i) {
+            for (int j = i * i; j <= N; j += i)
+                if (spf[j] == j) spf[j] = i;
+        }
+    }
+}
+```
+
+### Number of Divisors
+
+If
+
+```
+n = p1^a × p2^b × ...
+```
+
+Then
+
+```
+Total divisors = (a + 1)(b + 1)...
+```
 
 ---
 
-<details>
-<summary><strong>Bitwise Operations</strong></summary>
+## 3. Bitwise Operations
 
-Bitwise operations work directly on binary representations.
+Bitwise operations allow constant-time optimizations.
 
-**Common Operations**
+### Common Operations
 
 * AND (`&`)
 * OR (`|`)
@@ -78,48 +113,33 @@ Bitwise operations work directly on binary representations.
 * Left Shift (`<<`)
 * Right Shift (`>>`)
 
-**Applications**
-
-* Fast arithmetic
-* Subset generation
-* Optimization techniques
-
-**Time Complexity**
-
-* All bitwise operations: `O(1)`
-
-**C++ Example**
+### Important Tricks
 
 ```cpp
+// Check odd
 bool isOdd(int n) {
     return n & 1;
 }
+
+// Check power of two
+bool isPowerOfTwo(int n) {
+    return n && !(n & (n - 1));
+}
+
+// Remove lowest set bit
+n = n & (n - 1);
+
+// Count set bits
+__builtin_popcount(n);
 ```
 
-</details>
+Time Complexity: `O(1)`
 
 ---
 
-<details>
-<summary><strong>Euclidean Algorithm (GCD)</strong></summary>
+## 4. Euclidean Algorithm (GCD)
 
-Efficient algorithm to compute the Greatest Common Divisor.
-
-**Formula**
-
-* `gcd(a, b) = gcd(b, a % b)`
-
-**Applications**
-
-* LCM calculation
-* Fraction simplification
-* Coprime checking
-
-**Time Complexity**
-
-* `O(log min(a, b))`
-
-**C++ Implementation**
+### Standard GCD
 
 ```cpp
 long long gcd(long long a, long long b) {
@@ -127,25 +147,36 @@ long long gcd(long long a, long long b) {
 }
 ```
 
-</details>
+Time Complexity: `O(log min(a, b))`
+
+### Extended Euclidean Algorithm
+
+Used for modular inverse when modulus is not prime.
+
+```cpp
+long long extGCD(long long a, long long b, long long &x, long long &y) {
+    if (b == 0) {
+        x = 1; y = 0;
+        return a;
+    }
+    long long x1, y1;
+    long long g = extGCD(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - y1 * (a / b);
+    return g;
+}
+```
 
 ---
 
-<details>
-<summary><strong>Sieve of Eratosthenes</strong></summary>
+## 5. Sieve of Eratosthenes
 
-Efficient algorithm to precompute prime numbers up to `N`.
+Efficient prime generation for multiple queries.
 
-**Key Points**
+### Standard Sieve
 
-* Marks multiples of primes
-* Used for multiple prime queries
-
-**Time Complexity**
-
-* `O(n log log n)`
-
-**C++ Implementation**
+Time Complexity: `O(n log log n)`
+Space Complexity: `O(n)`
 
 ```cpp
 vector<bool> sieve(int n) {
@@ -161,24 +192,25 @@ vector<bool> sieve(int n) {
 }
 ```
 
-</details>
+### Optimization Options
+
+* Use `bitset` to reduce memory
+* Sieve only odd numbers
+* Maintain prime prefix count array
 
 ---
 
-<details>
-<summary><strong>Binary Modular Exponentiation</strong></summary>
+## 6. Binary Modular Exponentiation
 
-Used to compute large powers efficiently under modulo.
+Used for large power calculations under modulo.
 
-**Formula**
+### Formula
 
-* `(a^b) % m` using repeated squaring
+```
+a^b % m
+```
 
-**Time Complexity**
-
-* `O(log b)`
-
-**C++ Implementation**
+### Implementation
 
 ```cpp
 long long binpow(long long a, long long b, long long mod) {
@@ -192,45 +224,59 @@ long long binpow(long long a, long long b, long long mod) {
 }
 ```
 
-</details>
+Time Complexity: `O(log b)`
+
+### Extensions
+
+* Modular inverse
+* Matrix exponentiation
+* Linear recurrences
 
 ---
 
-<details>
-<summary><strong>Combinatorics</strong></summary>
+## 7. Combinatorics
 
-Combinatorics focuses on counting and arrangements.
+### Factorials Precomputation
 
-**Key Concepts**
+```cpp
+const int MOD = 1e9 + 7;
+vector<long long> fact, invFact;
 
-* Factorial
-* Permutations (`nPr`)
-* Combinations (`nCr`)
-* Pascal’s Identity
+void init(int n) {
+    fact.resize(n + 1);
+    invFact.resize(n + 1);
 
-**Formula**
+    fact[0] = 1;
+    for (int i = 1; i <= n; i++)
+        fact[i] = fact[i - 1] * i % MOD;
 
-* `nCr = n! / (r! × (n−r)!)`
+    invFact[n] = binpow(fact[n], MOD - 2, MOD);
+    for (int i = n; i > 0; i--)
+        invFact[i - 1] = invFact[i] * i % MOD;
+}
+```
 
-**Time Complexity**
+### Efficient nCr
+
+```cpp
+long long nCr(int n, int r) {
+    if (r < 0 || r > n) return 0;
+    return fact[n] * invFact[r] % MOD * invFact[n - r] % MOD;
+}
+```
+
+Time Complexity:
 
 * Precomputation: `O(n)`
 * Each query: `O(1)`
 
-**C++ Implementation**
-
-```cpp
-const int MOD = 1e9 + 7;
-vector<long long> fact(1000001);
-
-void computeFactorial() {
-    fact[0] = 1;
-    for (int i = 1; i <= 1000000; i++)
-        fact[i] = (fact[i - 1] * i) % MOD;
-}
-```
-
-</details>
-
 ---
 
+## 8. Must-Know Number Theory Theorems
+
+* Fermat’s Little Theorem
+* Wilson’s Theorem
+* Euler’s Totient Function
+* Chinese Remainder Theorem
+
+---
