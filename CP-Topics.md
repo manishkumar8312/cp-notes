@@ -16,10 +16,6 @@
 - **[Utkarsh Gupta – Number Theory (YouTube)](https://www.youtube.com/watch?v=tDM6lT-qjys)**
 - **[Number Theory - Yash Poonia](https://youtube.com/playlist?list=PLtfqa971vD5Fw0Kz0R9BnnjtVrIXbn72u&si=eGFtoRnURM1jin-j)** 
 
-
-Bilkul Manish 👍
-Main **exact same style + cleanliness** me **Graph Theory** ka section bana raha hoon, taaki aap seedha apne `CP-Topics.md` / `README.md` me paste kar sako 👌
-
 ---
 
 ## Graph Theory
