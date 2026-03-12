@@ -221,24 +221,29 @@ Divisors:
 ### C++ Implementation
 
 ```cpp
-int countDivisors(int n) {
-    int count = 1;
+long long sumOfDivisors(int n) {
+    long long sum = 1;
 
     for(int i = 2; i * i <= n; i++) {
-        int power = 0;
+        if(n % i == 0) {
 
-        while(n % i == 0) {
-            n /= i;
-            power++;
+            long long power = 1;
+            long long term = 1;
+
+            while(n % i == 0) {
+                n /= i;
+                power *= i;
+                term += power;
+            }
+
+            sum *= term;
         }
-
-        count *= (power + 1);
     }
 
     if(n > 1)
-        count *= 2;
+        sum *= (1 + n);
 
-    return count;
+    return sum;
 }
 ```
 ---
