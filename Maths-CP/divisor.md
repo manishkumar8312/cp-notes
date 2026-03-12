@@ -288,6 +288,34 @@ Using the formula:
 ```
 12^(6/2) = 12³ = 1728
 ```
+### CPP Implementation
+```cpp
+long long countDivisors(long long n) {
+    long long count = 1;
+
+    for(long long i = 2; i * i <= n; i++) {
+        int power = 0;
+
+        while(n % i == 0) {
+            n /= i;
+            power++;
+        }
+
+        if(power > 0)
+            count *= (power + 1);
+    }
+
+    if(n > 1)
+        count *= 2;
+
+    return count;
+}
+
+long long productOfDivisors(long long n) {
+    long long d = countDivisors(n);
+    return pow(n, d / 2);
+}
+```
 
 ### Reason
 
