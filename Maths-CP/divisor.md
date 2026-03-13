@@ -383,4 +383,4 @@ stores all divisors of `x`.
 [CF - LCM](https://codeforces.com/problemset/problem/1068/B) | 
 [CF - Number With the Given Amount of Divisors](https://codeforces.com/problemset/problem/27/E) |
 
-[LC - Four Divisors](https://leetcode.com/problems/four-divisors/) | 
+[LC - Four Divisors](https://leetcode.com/problems/four-divisors/)
