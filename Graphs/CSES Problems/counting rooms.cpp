@@ -83,63 +83,54 @@ int main() {
 
 #include <bits/stdc++.h>
 using namespace std;
+int n, m;
+vector<string> grid;
+vector<pair<int,int>> dir = {{1,0},{-1,0},{0,1},{0,-1}};
 
-int main() {
-    int n, m;
+void bfs(int r, int c){
+    queue<pair<int,int>> q;
+    q.push({r,c});
+    grid[r][c] = '#';  // mark visited
+
+    while(!q.empty()){
+        auto node = q.front();
+        q.pop();
+
+        int x = node.first;
+        int y = node.second;
+
+        for(auto d : dir){
+            int nx = x + d.first;
+            int ny = y + d.second;
+
+            if(nx>=0 && nx<n && ny>=0 && ny<m && grid[nx][ny]=='.'){
+                grid[nx][ny] = '#';   // mark visited
+                q.push({nx,ny});
+            }
+        }
+    }
+}
+
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     cin >> n >> m;
-
-    vector<string> grid(n);
-    for (int i = 0; i < n; i++) {
-        cin >> grid[i];
+    grid.resize(n);
+    for(int i = 0; i < n; i++){
+        cin >> grid[i];   // string input
     }
 
-    vector<vector<bool>> visited(n, vector<bool>(m, false));
-
-    // directions: up, down, left, right
-    vector<vector<int>> directions{
-        {-1, 0},
-        {1, 0},
-        {0, -1},
-        {0, 1}
-    };
-
     int rooms = 0;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-
-            if (grid[i][j] == '.' && !visited[i][j]) {
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            if(grid[i][j] == '.'){
+                bfs(i, j);
                 rooms++;
-
-                queue<pair<int,int>> q;
-                q.push({i, j});
-                visited[i][j] = true;
-
-                while (!q.empty()) {
-                    auto front = q.front();
-                    q.pop();
-                    int r = front.first;
-                    int c = front.second;
-                    for (auto &d : directions) {
-                        int nr = r + d[0];
-                        int nc = c + d[1];
-
-                        if (nr >= 0 && nr < n &&
-                            nc >= 0 && nc < m &&
-                            grid[nr][nc] == '.' &&
-                            !visited[nr][nc]) {
-
-                            visited[nr][nc] = true;
-                            q.push({nr, nc});
-                        }
-                    }
-                }
             }
         }
     }
 
-    cout << rooms << endl;
-    return 0;
+    cout << rooms << "\n";
 }
 
 
