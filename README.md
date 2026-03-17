@@ -25,14 +25,14 @@ All implementations follow competitive programming constraints and best practice
 
 ### Core Topics
 
-* **Number Theory**
+* * **[Number Theory](./Number-Theory/)**
 
   * Prime numbers and sieves
   * GCD and divisors
   * Prime-related problem variants
   * Competitive programming problems based on number theory
 
-* **Graphs**
+* **[Graphs](./Graphs/)**
 
   * BFS and DFS based traversal
   * Grid-based graph problems
