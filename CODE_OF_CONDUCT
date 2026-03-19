@@ -1,8 +1,7 @@
 Code of Conduct & Repository Purpose
 
-This repository contains structured Competitive Programming notes and optimized C++ solutions. It is intended to support systematic learning, efficient revision, and technical interview preparation, with a strong emphasis on algorithmic fundamentals and problem-solving efficiency.
-
----
+This repository contains structured Competitive Programming notes and optimized C++ solutions. It is intended to support systematic 
+learning, efficient revision, and technical interview preparation, with a strong emphasis on algorithmic fundamentals and problem-solving efficiency.
 
 Expected Behavior
 
@@ -14,8 +13,6 @@ All contributors are expected to:
 * Follow consistent coding practices, preferably in C++
 * Provide constructive feedback to improve the repository
 
----
-
 Unacceptable Behavior
 
 The following actions are not permitted:
@@ -25,8 +22,6 @@ The following actions are not permitted:
 * Disrespectful, abusive, or inappropriate communication
 * Spam or irrelevant contributions
 
----
-
 Contribution Guidelines
 
 Before contributing, ensure that:
@@ -35,8 +30,6 @@ Before contributing, ensure that:
 2. Proper explanations or comments are included where necessary
 3. Folder structure and naming conventions are followed consistently
 4. Content remains clear, structured, and accessible to learners
-
----
 
 Objective
 
