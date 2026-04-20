@@ -1,3 +1,10 @@
+/*
+
+    C. Count Good Numbers - 2125/c
+    Problem Link: https://codeforces.com/contest/2125/problem/C
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 typedef vector<int> vi;
