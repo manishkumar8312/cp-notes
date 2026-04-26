@@ -1,8 +1,20 @@
-
 /*
     CodeForces: Most Unstable Array
     Problem Link: https://codeforces.com/contest/1353/problem/A
+    
+    Observation:
+        - If n == 1 → answer = 0
+        - If n == 2 → answer = m
+        - Else → maximize instability → answer = 2*m
 
+        Greedy Idea:
+        - Maximize difference by placing extremes
+
+        Why Greedy Works:
+        - We want maximum adjacent difference → always push values to extremes
+
+        Mistake I could make:
+        - Overthinking with array construction (not needed)
 */
 
 
