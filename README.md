@@ -68,7 +68,6 @@ CP-Notes/
 ├── Greedy/
 │
 ├── Number-Theory/
-│   └── Notes/
 │
 ├── .gitignore
 ├── CODE_OF_CONDUCT
