@@ -21,15 +21,6 @@ The repository focuses on writing **clean, efficient, and reusable implementatio
 
 ---
 
-## Related Learning Resources
-
-| Repository                                                            | Description                                                                                                   |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [CP Notes](https://github.com/manishkumar8312/cp-notes)               | Competitive Programming notes, problem sheets, and optimized implementations                                  |
-| [CS Fundamentals](https://github.com/manishkumar8312/CS-Fundamentals) | Structured notes for DBMS, Operating Systems, Computer Networks, OOPs, TOC, and core CS interview preparation |
-
----
-
 ## CP Resources
 
 * [Competitive Programming Resources](https://docs.google.com/document/d/1Qmh_suVjBv0F3LFC5CfO06knn2zW92nfTyVlQLrUnFs/edit?tab=t.0)
