@@ -194,5 +194,3 @@ Suggestions, improvements, optimizations, and cleaner approaches are always welc
 
 If this repository helps your learning journey, consider giving it a ⭐ on GitHub.
 
-
-[1]: https://github.com/manishkumar8312/CS-Fundamentals?utm_source=chatgpt.com "manishkumar8312/CS-Fundamentals ..."
